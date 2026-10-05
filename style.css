@@ -1,0 +1,861 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #020817;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+section {
+    padding: 110px 20px;
+}
+
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 65px;
+    color: #ffffff;
+}
+
+
+p {
+    line-height: 1.9;
+    color: #c9dcf4;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #123c78 0%,
+            #061b3b 35%,
+            #020817 75%
+        );
+}
+
+
+.glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: #168cff;
+
+    filter: blur(130px);
+
+    opacity: .18;
+
+    animation: glow 5s infinite alternate;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+}
+
+
+.ring {
+    font-size: 90px;
+
+    animation: ringFloat 2s infinite ease-in-out;
+
+    filter: drop-shadow(
+        0 0 25px #55b9ff
+    );
+}
+
+
+.tiny {
+    margin-top: 20px;
+
+    letter-spacing: 4px;
+
+    color: #8dccff;
+
+    font-size: 14px;
+}
+
+
+.hero h1 {
+    margin-top: 15px;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: clamp(55px, 9vw, 100px);
+
+    text-shadow:
+        0 0 20px #168cff,
+        0 0 50px #168cff;
+}
+
+
+.yes {
+    font-size: clamp(70px, 12vw, 140px);
+
+    font-weight: 700;
+
+    color: #73caff;
+
+    text-shadow:
+        0 0 20px #168cff,
+        0 0 50px #168cff,
+        0 0 90px #006eff;
+
+    animation: yesGlow 2s infinite alternate;
+}
+
+
+.intro {
+    max-width: 600px;
+
+    margin: 20px auto 35px;
+}
+
+
+button {
+    padding: 16px 35px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #168cff,
+            #715cff
+        );
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,130,255,.4);
+
+    transition: .3s;
+}
+
+
+button:hover {
+    transform:
+        translateY(-5px)
+        scale(1.04);
+
+    box-shadow:
+        0 15px 45px
+        rgba(0,150,255,.65);
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+
+.letter-section {
+    background:
+        radial-gradient(
+            circle,
+            #123e75,
+            #020817 70%
+        );
+}
+
+
+.letter {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 65px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #e5f4ff
+        );
+
+    color: #243b55;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.5);
+}
+
+
+.flower-top,
+.flower-bottom {
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 35px;
+}
+
+
+.flower-bottom {
+    margin-top: 40px;
+
+    margin-bottom: 0;
+}
+
+
+.label {
+    color: #55b9ff;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.letter h2 {
+    color: #07569c;
+
+    margin-bottom: 25px;
+}
+
+
+.letter p {
+    color: #35516d;
+
+    margin: 20px 0;
+}
+
+
+.big-answer {
+    text-align: center;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 65px;
+
+    color: #0875cf;
+
+    margin: 35px 0;
+
+    text-shadow:
+        0 5px 20px
+        rgba(0,120,255,.25);
+}
+
+
+.special {
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: #dff2ff;
+
+    color: #07569c !important;
+
+    text-align: center;
+}
+
+
+.special strong {
+    font-size: 22px;
+}
+
+
+.signature {
+    margin-top: 35px;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 35px;
+
+    color: #07569c;
+
+    text-align: right;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+
+.story {
+    text-align: center;
+
+    background: #020817;
+}
+
+
+.timeline {
+    max-width: 700px;
+
+    margin: 70px auto 0;
+}
+
+
+.memory {
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(15,57,105,.45);
+
+    border:
+        1px solid
+        rgba(100,190,255,.2);
+
+    backdrop-filter: blur(10px);
+
+    transition: .3s;
+}
+
+
+.memory:hover {
+    transform: scale(1.03);
+
+    background:
+        rgba(20,75,135,.55);
+}
+
+
+.icon {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.memory h3 {
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 35px;
+
+    color: #7dccff;
+
+    margin-bottom: 10px;
+}
+
+
+.line {
+    width: 3px;
+
+    height: 50px;
+
+    margin: auto;
+
+    background:
+        linear-gradient(
+            #168cff,
+            transparent
+        );
+}
+
+
+/* =========================
+   BOUQUET
+========================= */
+
+
+.bouquet-section {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            #020817,
+            #071d3d
+        );
+}
+
+
+.bouquet {
+    position: relative;
+
+    max-width: 500px;
+
+    min-height: 300px;
+
+    margin: 70px auto 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 4px;
+
+    padding-bottom: 50px;
+}
+
+
+.flowers {
+    font-size: 70px;
+
+    max-width: 500px;
+
+    filter:
+        drop-shadow(
+            0 10px 15px
+            rgba(0,100,255,.25)
+        );
+}
+
+
+.flowers span {
+    display: inline-block;
+
+    animation:
+        flowerFloat
+        2s infinite alternate;
+}
+
+
+.flowers span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+
+.flowers span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+
+.flowers span:nth-child(4) {
+    animation-delay: .6s;
+}
+
+
+.flowers span:nth-child(5) {
+    animation-delay: .8s;
+}
+
+
+.leaves {
+    position: absolute;
+
+    bottom: 45px;
+
+    font-size: 35px;
+}
+
+
+.ribbon {
+    position: absolute;
+
+    bottom: 0;
+
+    font-size: 55px;
+}
+
+
+.bouquet-text {
+    max-width: 550px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   PROMISE
+========================= */
+
+
+.promise {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #123d73,
+            #020817 70%
+        );
+}
+
+
+.promise-card {
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 60px 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(130,210,255,.2);
+
+    backdrop-filter: blur(15px);
+}
+
+
+.lock {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+}
+
+
+.promise-card p {
+    max-width: 500px;
+
+    margin: 15px auto;
+}
+
+
+.promise-heart {
+    font-size: 70px;
+
+    margin-top: 25px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+
+.final {
+    min-height: 750px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #123f79,
+            #020817 70%
+        );
+}
+
+
+.stars {
+    font-size: 30px;
+
+    margin-bottom: 25px;
+
+    animation: sparkle 2s infinite alternate;
+}
+
+
+.final h2 {
+    font-size: 70px;
+}
+
+
+.final p {
+    margin: 20px 0 35px;
+}
+
+
+#finalMessage {
+    display: none;
+
+    margin-top: 45px;
+
+    padding: 35px;
+
+    max-width: 600px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(120,200,255,.3);
+
+    animation:
+        appear .8s ease;
+}
+
+
+#finalMessage h3 {
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 45px;
+
+    color: #7dccff;
+
+    margin: 15px 0;
+}
+
+
+.celebration {
+    font-size: 40px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    color: #72a9d3;
+
+    background: #01050d;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+
+.heart {
+    position: fixed;
+
+    bottom: -40px;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    animation:
+        floatHeart
+        linear forwards;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+
+@keyframes glow {
+
+    from {
+        transform: scale(.8);
+        opacity: .15;
+    }
+
+    to {
+        transform: scale(1.3);
+        opacity: .3;
+    }
+
+}
+
+
+@keyframes ringFloat {
+
+    0%,100% {
+        transform: translateY(0)
+                   rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-18px)
+                   rotate(5deg);
+    }
+
+}
+
+
+@keyframes yesGlow {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.04);
+    }
+
+}
+
+
+@keyframes flowerFloat {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    to {
+        transform:
+            translateY(-12px)
+            rotate(3deg);
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+
+@keyframes sparkle {
+
+    from {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes floatHeart {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:600px) {
+
+    section {
+        padding: 75px 15px;
+    }
+
+
+    h2 {
+        font-size: 48px;
+    }
+
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+
+    .yes {
+        font-size: 80px;
+    }
+
+
+    .letter {
+        padding: 35px 25px;
+    }
+
+
+    .big-answer {
+        font-size: 45px;
+    }
+
+
+    .flowers {
+        font-size: 48px;
+    }
+
+
+    .final h2 {
+        font-size: 50px;
+    }
+
+}
